@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <img src="{{android.img.url}}" width="350" height="350">
+        </div>
+        <div class="col-md-6">
+
+<a class="btn btn-warning" href="{% url 'androidapp:update' android.id %}">Update</a>
+<a class="btn btn-danger" href="{% url 'androidapp:delete' android.id %}">Delete</a><br>
+            <h1>{{android.name}}</h1><br>
+            <h4>{{android.desc}}</h4>
+            <h5>{{android.year}}</h5>
+
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+

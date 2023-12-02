@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block body %}
+
+<div class="container">
+    <div class="row">
+        {% for i in android_list %}
+        <div class="col-md-3">
+            <div class="card" style="height: 23rem; margin-top: 50px;margin-right: 70px;">
+  <img class="card-img-top" src="{{i.img.url}}" height="200" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">{{i.name}}</h5>
+    <p class="card-text">{{i.desc}}</p>
+    <a href="{% url 'androidapp:detail' i.id %}" class="btn btn-primary" style="position: absolute; bottom: 10px;">Click</a>
+  </div>
+</div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+
+
+{% endblock %}
+
